@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        .label-container{
+            background-color: #ccc;
+            /* padding: 10px; */
+            display: flex;
+            /* justify-content: space-between; */
+        }
+        .label-container>label{
+            padding: 20px;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .container>img{
+            width: 60%;
+            height: 60%;
+            display: none;
+        }
+        .container>input{
+            display: none;
+        }
+        .container>img{
+            margin: 0.8% auto;
+        }
+        /* .label-container>#Cat:checked~{
+            display: block;
+        } */
+        .container>#Cat:checked~.Cat{
+            display: block;
+        }
+        .container>#Tiger:checked~.Tiger{
+            display: block;
+        }
+        .container>#Cat:checked~.label-container>label:first-child{
+            background-color: #aaa;
+            color: white;
+        }
+        .container>#Tiger:checked~.label-container>label:last-child{
+            background-color: #aaa;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="radio" id="Cat" name="image">
+        <input type="radio" id="Tiger" name="image">
+        <div class="label-container">
+            <label for="Cat" >Cat</label>
+            <label for="Tiger" >Tiger</label>
+        </div>
+        <img src="https://th.bing.com/th/id/OIP.CBFZpMOFqyCjyHOJxouwVAHaE8?rs=1&pid=ImgDetMain" alt="" class="Cat">
+        <img src="https://images.alphacoders.com/436/436232.jpg" alt="" class="Tiger">
+    </div>
+</body>
+</html>
